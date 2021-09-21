@@ -8,7 +8,7 @@ This section is notes for how we want to run the crash course (and can be remove
    * Explain which repos we have in our GitHub organization
 * Week 2: Getting Started (software installations)
    * If using Windows 10, install Ubuntu for WSL2 using [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps). When at "Step 6 - Install your Linux distribution of choice", choose Ubuntu from the Microsoft Store
-   * Xserver setup: install [VcXsrv](https://sourceforge.net/projects/vcxsrv/) and then run `XLaunch`. I believe we went with all default settings except unchecking `Native opengl`, though I could be mistaken. 
+   * Xserver setup: install [VcXsrv](https://sourceforge.net/projects/vcxsrv/) and then run `XLaunch`. I believe we went with all default settings except unchecking `Native opengl` and checking `Disable access control`, though I could be mistaken. 
       * Drake likes testing with `xeyes` (make sure the Xserver is running first) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
       * Raven likes `xclock` better I think they said? I'm cool with whatever
    * (other installations that can be postponed: NoMachine/TeamViewer for shatterdome access)
