@@ -7,7 +7,9 @@ This section is notes for how we want to run the crash course (and can be remove
 * Week 1: Get people on GitHub and the Teams programming channel. Decide on a programming meeting time (how long?)
    * Explain which repos we have in our GitHub organization
 * Week 2: Getting Started (software installations)
-   * installing Ubuntu for WSL2, Xserver setup (Drake likes testing with `xeyes`) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
+   * If using Windows 10, install Ubuntu for WSL2 using [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps). When at "Step 6 - Install your Linux distribution of choice", choose Ubuntu from the Microsoft Store
+   * Xserver setup: install [VcXsrv](https://sourceforge.net/projects/vcxsrv/) and then run `XLaunch`. I believe we went with all default settings except unchecking `Native opengl`, though I could be mistaken. 
+      * Drake likes testing with `xeyes` (make sure the Xserver is running first) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
       * Raven likes `xclock` better I think they said? I'm cool with whatever
    * (other installations that can be postponed: NoMachine/TeamViewer for shatterdome access)
 * Week 3: Basic Bash intro
@@ -15,7 +17,17 @@ This section is notes for how we want to run the crash course (and can be remove
    * (If we wanna get to the python tutorial sooner, we could do python in VS Code and postpone this until after)
 * Week 4-5: Basic Python tutorial (do after git intro?)
    * Using Python's [turtle](https://www.geeksforgeeks.org/turtle-programming-python/) library?
-      * Drake got it to work with just Ubuntu WSL2, [`sudo apt-get install python3-tk`](https://stackoverflow.com/questions/25905540/importerror-no-module-named-tkinter), and an Xserver running: ![image](https://user-images.githubusercontent.com/19244666/118378278-4a3b7880-b598-11eb-9842-7486c6f247cb.png)
+      * Drake got it to work with just Ubuntu WSL2, [`sudo apt-get install python3-tk`](https://stackoverflow.com/questions/25905540/importerror-no-module-named-tkinter), and an Xserver running: 
+      * ![image](https://user-images.githubusercontent.com/19244666/134120816-6d271240-6c1d-48e9-90f5-5f1ad68cc2ab.png)
+        <details>
+           <summary>^^ Click to reveal source code for the above example. ^^</summary>
+           ![image](https://user-images.githubusercontent.com/19244666/118378278-4a3b7880-b598-11eb-9842-7486c6f247cb.png)
+        </details>
+      * ![image](https://user-images.githubusercontent.com/19244666/134121224-e38e87bd-df20-49e3-b7f5-9b32bb7d8dc8.png)
+        <details>
+           <summary>^^ Click to reveal source code for the above example. ^^</summary>
+           ![image](https://user-images.githubusercontent.com/19244666/134120525-dd5f4654-0fd3-464a-9d7f-c962ebad3fcd.png)
+        </details>
       * If we want we can do this in VS Code instead of the terminal
       * Maybe have this be part of the git learning by tracking code in a branch? Might unnecessarily complicate the python learning though
 * Week 6: GitHub (and git?) intro (do before python intro?)
