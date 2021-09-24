@@ -10,7 +10,7 @@ This section is notes for how we want to run the crash course (and can be remove
 
 #### Week 2: Getting Started (software installations)
 * If using Windows 10, install Ubuntu for WSL2 using [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps). When at "Step 6 - Install your Linux distribution of choice", choose Ubuntu from the Microsoft Store
-* Xserver setup: install [VcXsrv](https://sourceforge.net/projects/vcxsrv/) and then run `XLaunch`. I believe we went with all default settings except unchecking `Native opengl` and checking `Disable access control`, though I could be mistaken. 
+* To set up an X-server for yourself, follow our [Installing an X-Server guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-an-X-Server.md) 
   * Drake likes testing with `xeyes` (make sure the Xserver is running first) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
   * Raven likes `xclock` better I think they said? I'm cool with whatever
 * (other installations that can be postponed: NoMachine/TeamViewer for shatterdome access)
@@ -21,14 +21,31 @@ This section is notes for how we want to run the crash course (and can be remove
 
 #### Week 4-5: Basic Python tutorial (do after git intro?)
 * Using Python's [turtle](https://www.geeksforgeeks.org/turtle-programming-python/) library
-  * Drake got it to work with just Ubuntu WSL2, [`sudo apt-get install python3-tk`](https://stackoverflow.com/questions/25905540/importerror-no-module-named-tkinter), and an Xserver running: 
-  * ![image](https://user-images.githubusercontent.com/19244666/134120816-6d271240-6c1d-48e9-90f5-5f1ad68cc2ab.png)
+  * Drake got it to work with just Ubuntu WSL2, [`sudo apt-get install python3-tk`](https://stackoverflow.com/questions/25905540/importerror-no-module-named-tkinter), and an Xserver running
+  * Start with this code:
+    ```python3
+    import turtle
+    
+    # setup 
+    scrn = turtle.getscreen()
+    turt = turtle.Turtle()
+    
+    # vvv YOUR CODE GOES BELOW HERE vvv
+    
+    
+    
+    # ^^^ YOUR CODE GOES ABOVE HERE ^^^
+    
+    # leave the screen open until clicked
+    scrn.exitonclick()
+    ```
+  * Challenges - make these drawings: ![image](https://user-images.githubusercontent.com/19244666/134120816-6d271240-6c1d-48e9-90f5-5f1ad68cc2ab.png)
   <details>
     <summary>^^ Click to reveal source code for the above example. ^^</summary>
     ![image](https://user-images.githubusercontent.com/19244666/118378278-4a3b7880-b598-11eb-9842-7486c6f247cb.png)
   </details>
   
-  * ![image](https://user-images.githubusercontent.com/19244666/134121224-e38e87bd-df20-49e3-b7f5-9b32bb7d8dc8.png)
+  * (Hint: the angle to turn for each shape is `360.0 / num_sides`) ![image](https://user-images.githubusercontent.com/19244666/134121224-e38e87bd-df20-49e3-b7f5-9b32bb7d8dc8.png)
   <details>
     <summary>^^ Click to reveal source code for the above example. ^^</summary>
     ![image](https://user-images.githubusercontent.com/19244666/134120525-dd5f4654-0fd3-464a-9d7f-c962ebad3fcd.png)
@@ -42,7 +59,8 @@ This section is notes for how we want to run the crash course (and can be remove
 
 #### Week 7: Docker conceptual intro (just to get it running and understand why we use it)
 * read [What is Docker?](https://dev.to/javascriptcoff1/what-is-docker-3be2)
-* running one of our ROS2 containers
+* Install and test Docker in your terminal by following our [Installing Docker guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-Docker.md)
+* running one of our ROS2 containers: follow the README instructions for running our [`ros2_foxy` Docker container](https://github.com/NIURoverTeam/Dockerfiles/tree/master/ros2_foxy) (you'll need to clone that `NIURoverTeam/Dockerfiles` repo in your WSL)
   * check integrity with `ros2 doctor`
 
 #### Weeks 8-11: [ROS2 Beginner Tutorials: CLI Tools & Client Libraries](https://docs.ros.org/en/foxy/Tutorials.html) (but slightly out of order). Drake tentatively proposes the following tutorials order:
