@@ -79,6 +79,7 @@ This section is notes for how we want to run the crash course (and can be remove
   * Creating your first ROS 2 package (not sure if necessary)
   * Writing a simple publisher and subscriber (Python)
     * challenge: modify the publisher so it says a different message
+    * challenge: write a publisher that controls the turtlesim to make shapes similar to what we did with the Python `turtle` library (color fill not necessary though)
 
 #### Some weeks: more ROS2 tutorials (do this after Webots intro?)
 * understanding services
