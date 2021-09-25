@@ -57,13 +57,7 @@ This section is notes for how we want to run the crash course (and can be remove
 * read [What is Git?](https://dev.to/javascriptcoff1/what-is-git-4pmh)
 * Maybe have a chunk of code they clone (e.g. a python `turtle` function), modify, and then push their changes to a branch?
 
-#### Week 7: Docker conceptual intro (just to get it running and understand why we use it)
-* read [What is Docker?](https://dev.to/javascriptcoff1/what-is-docker-3be2)
-* Install and test Docker in your terminal by following our [Installing Docker guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-Docker.md)
-* running one of our ROS2 containers: follow the README instructions for running our [`ros2_foxy` Docker container](https://github.com/NIURoverTeam/Dockerfiles/tree/master/ros2_foxy) (you'll need to clone that `NIURoverTeam/Dockerfiles` repo in your WSL)
-  * check integrity with `ros2 doctor`
-
-#### Weeks 8-11: [ROS2 Beginner Tutorials: CLI Tools & Client Libraries](https://docs.ros.org/en/foxy/Tutorials.html) (but slightly out of order). Drake tentatively proposes the following tutorials order:
+#### Weeks 7-10: [ROS2 Beginner Tutorials: CLI Tools & Client Libraries](https://docs.ros.org/en/foxy/Tutorials.html) (but slightly out of order). Drake tentatively proposes the following tutorials order:
 * Some of the "Beginner: CLI Tools" tutorials:
   * Configuring your ROS 2 environment
   * Introducing turtlesim and rqt? (not sure if necessary. `rqt_graph` is introduced in "ROS 2 topics" tutorial)
@@ -92,3 +86,15 @@ This section is notes for how we want to run the crash course (and can be remove
 * quick intro to scene tree
 * writing code to communicate with robot controller
 * not in crash course, but further reading: https://cyberbotics.com/doc/guide/tutorials?tab-language=python
+
+---
+
+### The Shadow Realm (AKA sections we decided not to pursue)
+This area is for plans we decided to drop, but that we don't want to necessarily delete or bury in the commit history. Ideally, any sections added here should include a note for why they've been banished to The Shadow Realm<sup>:tm:</sup>.
+
+#### Docker conceptual intro (just to get it running and understand why we use it)
+* _(Banished because we discovered Docker was unnecessary for ROS2. Instead, we can just `ssh -X` into shatterdome with an X-server running locally, and it will work just fine.)_
+* read [What is Docker?](https://dev.to/javascriptcoff1/what-is-docker-3be2)
+* Install and test Docker in your terminal by following our [Installing Docker guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-Docker.md)
+* running one of our ROS2 containers: follow the README instructions for running our [`ros2_foxy` Docker container](https://github.com/NIURoverTeam/Dockerfiles/tree/master/ros2_foxy) (you'll need to clone that `NIURoverTeam/Dockerfiles` repo in your WSL)
+  * check integrity with `ros2 doctor`
