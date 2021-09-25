@@ -58,6 +58,7 @@ This section is notes for how we want to run the crash course (and can be remove
 * Maybe have a chunk of code they clone (e.g. a python `turtle` function), modify, and then push their changes to a branch?
 
 #### Weeks 7-10: [ROS2 Beginner Tutorials: CLI Tools & Client Libraries](https://docs.ros.org/en/foxy/Tutorials.html) (but slightly out of order). Drake tentatively proposes the following tutorials order:
+> Note, to get ROS2 working on your computer, start your X-server, SSH into shatterdome with `ssh -X <username>@<shatterdome_ip>`, and then it should work. If off the campus's WiFi, first SSH into your Turing/Hopper account using `ssh -Y <username>@turing.cs.niu.edu` or `ssh -Y <username>@hopper.cs.niu.edu`, and then `ssh -X` to shatterdome as described above.
 * Some of the "Beginner: CLI Tools" tutorials:
   * Configuring your ROS 2 environment
   * Introducing turtlesim and rqt? (not sure if necessary. `rqt_graph` is introduced in "ROS 2 topics" tutorial)
