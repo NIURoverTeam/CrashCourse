@@ -61,19 +61,19 @@ This section is notes for how we want to run the crash course (and can be remove
 #### Weeks 7-10: [ROS2 Beginner Tutorials: CLI Tools & Client Libraries](https://docs.ros.org/en/foxy/Tutorials.html) (but slightly out of order). Drake tentatively proposes the following tutorials order:
 > Note, to get ROS2 working on your computer, start your X-server, SSH into shatterdome with `ssh -X <username>@<shatterdome_ip>`, and then it should work. If off the campus's WiFi, first SSH into your Turing/Hopper account using `ssh -Y <username>@turing.cs.niu.edu` or `ssh -Y <username>@hopper.cs.niu.edu`, and then `ssh -X` to shatterdome as described above.
 * Some of the "Beginner: CLI Tools" tutorials:
-  * Configuring your ROS 2 environment
-  * Introducing turtlesim and rqt? (not sure if necessary. `rqt_graph` is introduced in "ROS 2 topics" tutorial)
+  * [Configuring your ROS 2 environment](https://docs.ros.org/en/foxy/Tutorials/Configuring-ROS2-Environment.html)
+  * [Introducing turtlesim and rqt](https://docs.ros.org/en/foxy/Tutorials/Turtlesim/Introducing-Turtlesim.html) (not sure if necessary? `rqt_graph` is introduced in "ROS 2 topics" tutorial)
     * challenge: some "check your understanding" questions. Can hide answer like so:
       <details>
         <summary>click to reveal answer</summary>
         hello world
       </details>
-  * Understanding ROS 2 nodes
-  * Understanding ROS 2 topics
+  * [Understanding ROS 2 nodes](https://docs.ros.org/en/foxy/Tutorials/Understanding-ROS2-Nodes.html)
+  * [Understanding ROS 2 topics](https://docs.ros.org/en/foxy/Tutorials/Topics/Understanding-ROS2-Topics.html)
 * Some of the "Beginner: Client Libraries" tutorials:
-  * Creating a workspace
-  * Creating your first ROS 2 package (not sure if necessary)
-  * Writing a simple publisher and subscriber (Python)
+  * [Creating a workspace](https://docs.ros.org/en/foxy/Tutorials/Workspace/Creating-A-Workspace.html)
+  * [Creating your first ROS 2 package](https://docs.ros.org/en/foxy/Tutorials/Creating-Your-First-ROS2-Package.html) (not sure if necessary)
+  * [Writing a simple publisher and subscriber (Python)](https://docs.ros.org/en/foxy/Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
     * challenge: modify the publisher so it says a different message
     * challenge: write a publisher that controls the turtlesim to make shapes similar to what we did with the Python `turtle` library (color fill not necessary though)
 
