@@ -39,6 +39,7 @@ This section is notes for how we want to run the crash course (and can be remove
     # leave the screen open until clicked
     scrn.exitonclick()
     ```
+  * Use these functions: `forward(amount)`, `backward(amount)`, `right(angle)`, `left(angle)`, `fillcolor(color_name)`, `begin_fill()`, `end_fill()`, `penup()` (picks up the turtle's pen), and/or `pendown()` (puts down the turtle's pen). More info and a few more functions can be found [here](https://www.geeksforgeeks.org/turtle-programming-python/). Make sure to call these functions from the Turtle object we instantiated in the starter code.
   * Challenges - make these drawings: ![image](https://user-images.githubusercontent.com/19244666/134120816-6d271240-6c1d-48e9-90f5-5f1ad68cc2ab.png)
   <details>
     <summary>^^ Click to reveal source code for the above example. ^^</summary>
