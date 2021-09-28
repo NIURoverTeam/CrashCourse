@@ -52,7 +52,7 @@ This section is notes for how we want to run the crash course (and can be remove
         ![image](https://user-images.githubusercontent.com/19244666/118378278-4a3b7880-b598-11eb-9842-7486c6f247cb.png)
       </details>
   
-    * In a separate python file, write the body for a function named `def draw_polygon(num_sides):`, which draws a regular polygon with the requested number of sides (Hint: the angle to turn for each shape is `360.0 / num_sides`). Then call the function in a for-loop to draw everything from a triangle to an octagon.  ![image](https://user-images.githubusercontent.com/19244666/134121224-e38e87bd-df20-49e3-b7f5-9b32bb7d8dc8.png)
+    * In a separate python file, write the body for a function named `def draw_polygon(num_sides):`, which draws a regular polygon with the requested number of sides (Hint: the angle to turn for each shape is `360.0 / num_sides`). The side lengths are all `100` in the example image. Then call the function in a for-loop to draw everything from a triangle to an octagon.  ![image](https://user-images.githubusercontent.com/19244666/134121224-e38e87bd-df20-49e3-b7f5-9b32bb7d8dc8.png)
       <details>
         <summary>^^ Click to reveal source code for the above example. ^^</summary>
         ![image](https://user-images.githubusercontent.com/19244666/134120525-dd5f4654-0fd3-464a-9d7f-c962ebad3fcd.png)
