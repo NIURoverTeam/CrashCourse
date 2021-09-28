@@ -41,22 +41,22 @@ This section is notes for how we want to run the crash course (and can be remove
     ```
   * Use these functions: `forward(amount)`, `backward(amount)`, `right(angle)`, `left(angle)`, `fillcolor(color_name)`, `begin_fill()`, `end_fill()`, `penup()` (picks up the turtle's pen), and/or `pendown()` (puts down the turtle's pen). More info and a few more functions can be found [here](https://www.geeksforgeeks.org/turtle-programming-python/). Make sure to call these functions from the Turtle object we instantiated in the starter code.
   * Challenges - make these drawings: 
-  * Write the body for a function named `def colored_square(my_size, my_color):`, which draws a square of size `my_size` and color `my_color`. Then draw two squares using these two lines:
-    ```python3
-    colored_square(100, "blue")
-    colored_square(50, "red")
-    ```
-    ![image](https://user-images.githubusercontent.com/19244666/134120816-6d271240-6c1d-48e9-90f5-5f1ad68cc2ab.png)
-  <details>
-    <summary>^^ Click to reveal source code for the above example. ^^</summary>
-    ![image](https://user-images.githubusercontent.com/19244666/118378278-4a3b7880-b598-11eb-9842-7486c6f247cb.png)
-  </details>
+    * Write the body for a function named `def colored_square(my_size, my_color):`, which draws a square of size `my_size` and color `my_color`. Then draw two squares using these two lines:
+      ```python3
+      colored_square(100, "blue")
+      colored_square(50, "red")
+      ```
+      ![image](https://user-images.githubusercontent.com/19244666/134120816-6d271240-6c1d-48e9-90f5-5f1ad68cc2ab.png)
+      <details>
+        <summary>^^ Click to reveal source code for the above example. ^^</summary>
+        ![image](https://user-images.githubusercontent.com/19244666/118378278-4a3b7880-b598-11eb-9842-7486c6f247cb.png)
+      </details>
   
-  * (Hint: the angle to turn for each shape is `360.0 / num_sides`) ![image](https://user-images.githubusercontent.com/19244666/134121224-e38e87bd-df20-49e3-b7f5-9b32bb7d8dc8.png)
-  <details>
-    <summary>^^ Click to reveal source code for the above example. ^^</summary>
-    ![image](https://user-images.githubusercontent.com/19244666/134120525-dd5f4654-0fd3-464a-9d7f-c962ebad3fcd.png)
-  </details>
+    * In a separate python file, write the body for a function named `def draw_polygon(num_sides):`, which draws a regular polygon with the requested number of sides (Hint: the angle to turn for each shape is `360.0 / num_sides`). Then call the function in a for-loop to draw everything from a triangle to an octagon.  ![image](https://user-images.githubusercontent.com/19244666/134121224-e38e87bd-df20-49e3-b7f5-9b32bb7d8dc8.png)
+      <details>
+        <summary>^^ Click to reveal source code for the above example. ^^</summary>
+        ![image](https://user-images.githubusercontent.com/19244666/134120525-dd5f4654-0fd3-464a-9d7f-c962ebad3fcd.png)
+      </details>
 * If we want we can do this in VS Code instead of the terminal
 * Maybe have this be part of the git learning by tracking code in a branch? Might unnecessarily complicate the python learning though
 
