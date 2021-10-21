@@ -9,7 +9,8 @@ This section is notes for how we want to run the crash course (and can be remove
 * Explain which repos we have in our GitHub organization
 
 #### Week 2: Getting Started (software installations)
-* If using Windows 10, install Ubuntu for WSL2 using [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps). When at "Step 6 - Install your Linux distribution of choice", choose Ubuntu from the Microsoft Store
+* If using Windows 10, install Ubuntu for WSL2 using [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps)
+  > If instructed to download your Linux distribution of choice, choose Ubuntu from the Microsoft Store. As of September 2021 however, I don't think this is part of the linked guide.
 * To set up an X-server for yourself, follow our [Installing an X-Server guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-an-X-Server.md) 
   * Drake likes testing with `xeyes` (make sure the Xserver is running first) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
   * Raven likes `xclock` better I think they said? I'm cool with whatever
