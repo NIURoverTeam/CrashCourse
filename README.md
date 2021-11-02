@@ -83,7 +83,7 @@ This section is notes for how we want to run the crash course (and can be remove
   * [Understanding ROS 2 topics](https://docs.ros.org/en/foxy/Tutorials/Topics/Understanding-ROS2-Topics.html)
 * Some of the "Beginner: Client Libraries" tutorials:
   * [Creating a workspace](https://docs.ros.org/en/foxy/Tutorials/Workspace/Creating-A-Workspace.html)
-  * [Creating your first ROS 2 package](https://docs.ros.org/en/foxy/Tutorials/Creating-Your-First-ROS2-Package.html) (not sure if necessary)
+  * [Creating your first ROS 2 package](https://docs.ros.org/en/foxy/Tutorials/Creating-Your-First-ROS2-Package.html)
   * [Writing a simple publisher and subscriber (Python)](https://docs.ros.org/en/foxy/Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
     * challenge: modify the publisher so it says a different message
     * challenge: write a publisher that controls the turtlesim to make shapes similar to what we did with the Python `turtle` library (color fill not necessary though)
