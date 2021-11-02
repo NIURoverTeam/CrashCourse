@@ -87,6 +87,10 @@ This section is notes for how we want to run the crash course (and can be remove
   * [Writing a simple publisher and subscriber (Python)](https://docs.ros.org/en/foxy/Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
     * challenge: modify the publisher so it says a different message
     * challenge: write a publisher that controls the turtlesim to make shapes similar to what we did with the Python `turtle` library (color fill not necessary though)
+  * For reference, here are some diagrams explaining the structure of workspaces and packages (source https://www.youtube.com/watch?v=lN4_-l7FCWk): 
+    * ![image(2)](https://user-images.githubusercontent.com/19244666/139920787-da3573bf-473b-43cc-bd36-5f700bbf8901.png)
+    * ![image](https://user-images.githubusercontent.com/19244666/139920838-9169ce76-88db-432b-ba66-30534ca31249.png)
+    * ![image(1)](https://user-images.githubusercontent.com/19244666/139920851-44951ea4-34d1-45b5-ae7f-32831befb34a.png)
 
 #### Some weeks: more ROS2 tutorials (do this after Webots intro?)
 * understanding services
