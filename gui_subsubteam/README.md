@@ -16,8 +16,12 @@ Our web interface needs a way to interface with ROS, so here's the relevant libr
 * Tutorials (outdated, ros1 instead of ros2) are available on this page: http://wiki.ros.org/roslibjs#tutorials  
 * The protocol (rosbridge) which the library implements: https://wiki.ros.org/rosbridge_suite
  
-Rosbridge has been installed on shatterdome!
+Rosbridge has been installed on Shatterdome!
 
 ## (7 February 2022) Initial Converted Tutorial (WIP)
 
 [Basic ROS2 and roslibjs Functionality](tutorial_basicrosfunctionality.md) (based on the corresponding [ROS1 Tutorial](http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality))
+
+Notes for me, the process of converting the tutorial over:
+1. Instaled NGINX on Shatterdome.
+2. Cloned the roslibjs repo into `/var/www`, checked out tag `1.2.0`, so http://10.156.209.2/roslibjs/build/roslib.min.js is the path to the minified js lib file.
