@@ -18,10 +18,13 @@ Our web interface needs a way to interface with ROS, so here's the relevant libr
  
 Rosbridge has been installed on Shatterdome!
 
-## (7 February 2022) Initial Converted Tutorial (WIP)
+## (7 February 2022) Discussion Required Applets for UI
 
-[Basic ROS2 and roslibjs Functionality](tutorial_basicrosfunctionality.md) (based on the corresponding [ROS1 Tutorial](http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality))
+## (14 February 2022) Initial Tutorial: Turtlesim Redux
+
+[Basic ROS2 and roslibjs Functionality](tutorial_basicrosfunctionality.md) (elements borrowed from a [ROS1 Tutorial](http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality))
 
 Notes for me, the process of converting the tutorial over:
 1. Instaled NGINX on Shatterdome.
 2. Cloned the roslibjs repo into `/var/www`, checked out tag `1.2.0`, so http://10.156.209.2/roslibjs/build/roslib.min.js is the path to the minified js lib file.
+3. ROS2 run for websocket is now documented in our tutorial.
