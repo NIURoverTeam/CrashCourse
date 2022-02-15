@@ -40,7 +40,7 @@ Create a new HTML file and fill it with this:
   });
 
   // Create a connection to the rosbridge WebSocket server.
-  ros.connect('ws://localhost:8081');
+  ros.connect('ws://10.156.209.2:8081');
 
   // Publishing a Topic
   // ------------------
