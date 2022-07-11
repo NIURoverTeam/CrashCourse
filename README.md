@@ -1,27 +1,26 @@
-# CrashCourse2021
+# Crash Course
 Learning how to program a Mars rover, one week at a time.
 
 ## Lesson Planning
-This section is notes for how we want to run the crash course (and can be removed once our planning is complete). There are 15 weeks in a semester, so we should probably aim to complete the crash course in 10-ish weeks I think to give some leeway. These bullet points are meant to be **in order** of how we want to teach things. Feel free to make revisions as desired. :)
+There are 15 weeks in a semester, so this crash course aims to complete the new member training in 10-ish weeks to give some leeway. These bullet points are meant to be **in order** of how we want to teach things. Feel free to make revisions as desired. :)
 
 #### Week 1: Setting up communication
-* Get people on GitHub and the Teams programming channel. Decide on a programming meeting time (how long?)
+* Get people on GitHub and the Teams programming channel. Decide on a programming meeting time
 * Explain which repos we have in our GitHub organization
 
 #### Week 2: Getting Started (software installations)
+* TODO should we skip this and use `xrdp` instead? ["Remote Desktop with xrdp" guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Remote-Desktop-with-xrdp.md)
 * If using Windows 10:
   * Install WSL2 using [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps).
     > If instructed to download your Linux distribution of choice, choose Ubuntu from the Microsoft Store. As of September 2021 however, I don't think this is part of the linked guide.
   * If you don't see `Ubuntu` when you search for it in your Start Menu, go ahead and install it from the Microsoft Store as well. Choose the one named just `Ubuntu`, without any numbers after.
 * Regardless of your operating system:
   * To set up an X-server for yourself, follow our [Installing an X-Server guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-an-X-Server.md) 
-    * Drake likes testing with `xeyes` (make sure the Xserver is running first) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
-    * Raven likes `xclock` better I think they said? I'm cool with whatever
-* (other installations that can be postponed: NoMachine/TeamViewer for shatterdome access)
+    * You can test your X-server with `xeyes` (make sure the Xserver is running first) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
+    * `xclock` is another good option
 
 #### Week 3: Basic Bash intro
 * Command structure (`$ command [-options] [arguments]`), basic filesystem, `pwd`, `mkdir`, `ls`, `cd`, `nano`, `cp`, `mv`, `rmdir`, `rm`, `man`. See our [Bash & Linux Crash Course](https://github.com/NIURoverTeam/Docs/blob/main/legacy/Bash-%26-Linux-Crash-Course.md) for more details.
-* (If we wanna get to the python tutorial sooner, we could do python in VS Code and postpone this until after)
 
 #### Week 4-5: Basic Python tutorial (do after git intro?)
 * Using Python's [turtle](https://www.geeksforgeeks.org/turtle-programming-python/) library
@@ -45,31 +44,75 @@ This section is notes for how we want to run the crash course (and can be remove
     ```
   * Use these functions: `forward(amount)`, `backward(amount)`, `right(angle)`, `left(angle)`, `fillcolor(color_name)`, `begin_fill()`, `end_fill()`, `penup()` (picks up the turtle's pen), and/or `pendown()` (puts down the turtle's pen). More info and a few more functions can be found [here](https://www.geeksforgeeks.org/turtle-programming-python/). Make sure to call these functions from the Turtle object we instantiated in the starter code.
   * Challenges - make these drawings: 
-    * Write the body for a function named `def colored_square(my_size, my_color):`, which draws a square of size `my_size` and color `my_color`. Then draw two squares using these two lines:
-      ```python3
+    * Write the body for a function named `def colored_square(my_size, my_color):`, which draws a square of size `my_size` and color `my_color`. Then draw two squares using these lines:
+      ```python3      
+      # call function several times with different arguments
       colored_square(100, "blue")
       colored_square(50, "red")
       ```
       ![image](https://user-images.githubusercontent.com/19244666/134120816-6d271240-6c1d-48e9-90f5-5f1ad68cc2ab.png)
       <details>
-        <summary>^^ Click to reveal source code for the above example. ^^</summary>
-        ![image](https://user-images.githubusercontent.com/19244666/118378278-4a3b7880-b598-11eb-9842-7486c6f247cb.png)
+        <summary>^^ Click to reveal a possible solution (try it yourself first!) ^^</summary>
+
+        ```python3
+        import turtle
+        
+        # setup
+        scrn = turtle.getscreen()
+        turt = turtle.Turtle()
+        
+        # define function to draw colored square
+        def colored_square(my_size, my_color):
+            turt.fillcolor(my_color)
+            
+            turt.begin_fill()
+            for i in range(4):
+                turt.forward(my_size)
+                turt.left(90)
+            turt.end_fill()
+        
+        # call function several times with different arguments
+        colored_square(100, "blue")
+        colored_square(50, "red")
+        
+        # leave the screen open until clicked
+        scrn.exitonclick()
+        ```
       </details>
   
     * In a separate python file, write the body for a function named `def draw_polygon(num_sides):`, which draws a regular polygon with the requested number of sides (Hint: the angle to turn for each shape is `360.0 / num_sides`). The side lengths are all `100` in the example image. Then call the function in a for-loop to draw everything from a triangle to an octagon.  ![image](https://user-images.githubusercontent.com/19244666/134121224-e38e87bd-df20-49e3-b7f5-9b32bb7d8dc8.png)
       <details>
-        <summary>^^ Click to reveal source code for the above example. ^^</summary>
-        ![image](https://user-images.githubusercontent.com/19244666/134120525-dd5f4654-0fd3-464a-9d7f-c962ebad3fcd.png)
-      </details>
-* If we want we can do this in VS Code instead of the terminal
-* Maybe have this be part of the git learning by tracking code in a branch? Might unnecessarily complicate the python learning though
+        <summary>^^ Click to reveal a possible solution (try it yourself first!) ^^</summary>
 
-#### Week 6: GitHub (and git?) intro (do before python intro?)
+        ```python3
+        import turtle
+        
+        # setup
+        scrn = turtle.getscreen()
+        turt = turtle.Turtle()
+        
+        # define function to draw polygon with some number of sides
+        def draw_polygon(num_sides):
+            turn_angle = 360.0 / num_sides
+            for side in range(num_sides):
+                turt.forward(100)
+                turt.left(turn_angle)
+        
+        # draw polygons with the same starting point
+        for num_sides in range(3, 9):
+            draw_polygon(num_sides)
+        
+        # leave the screen open until clicked
+        scrn.exitonclick()
+      </details>
+
+#### Week 6: GitHub (and git?) intro
 * read [What is Git?](https://dev.to/javascriptcoff1/what-is-git-4pmh)
 * Maybe have a chunk of code they clone (e.g. a python `turtle` function), modify, and then push their changes to a branch?
 
 #### Weeks 7-10: [ROS2 Beginner Tutorials: CLI Tools & Client Libraries](https://docs.ros.org/en/foxy/Tutorials.html) (but slightly out of order). Drake tentatively proposes the following tutorials order:
 > Note, to get ROS2 working on your computer, start your X-server, SSH into shatterdome with `ssh -X <username>@<shatterdome_ip>`, and then it should work. If off the campus's WiFi, first SSH into your Turing/Hopper account using `ssh -Y <username>@turing.cs.niu.edu` or `ssh -Y <username>@hopper.cs.niu.edu`, and then `ssh -X` to shatterdome as described above.
+  > * TODO should we use `xrdp` instead? ["Remote Desktop with xrdp" guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Remote-Desktop-with-xrdp.md)
 
 > Note, since we're SSH'ing into shatterdome which is a Linux machine, **always use the Linux instructions, _even if you're a MacOS or Windows user!!!_**
 * Some of the "Beginner: CLI Tools" tutorials:
