@@ -9,20 +9,13 @@ There are 15 weeks in a semester, so this crash course aims to complete the new 
 * Explain which repos we have in our GitHub organization
 
 #### Week 2: Getting Started (software installations)
-* TODO should we skip this and use `xrdp` instead? ["Remote Desktop with xrdp" guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Remote-Desktop-with-xrdp.md)
-* If using Windows 10:
-  * Install WSL2 using [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps).
-    > If instructed to download your Linux distribution of choice, choose Ubuntu from the Microsoft Store. As of September 2021 however, I don't think this is part of the linked guide.
-  * If you don't see `Ubuntu` when you search for it in your Start Menu, go ahead and install it from the Microsoft Store as well. Choose the one named just `Ubuntu`, without any numbers after.
-* Regardless of your operating system:
-  * To set up an X-server for yourself, follow our [Installing an X-Server guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-an-X-Server.md) 
-    * You can test your X-server with `xeyes` (make sure the Xserver is running first) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
-    * `xclock` is another good option
+* Create profiles on Shatterdome for all new users
+* Get everyone set up with `xrdp` using our ["Remote Desktop with xrdp" guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Remote-Desktop-with-xrdp.md)
 
 #### Week 3: Basic Bash intro
 * Command structure (`$ command [-options] [arguments]`), basic filesystem, `pwd`, `mkdir`, `ls`, `cd`, `nano`, `cp`, `mv`, `rmdir`, `rm`, `man`. See our [Bash & Linux Crash Course](https://github.com/NIURoverTeam/Docs/blob/main/legacy/Bash-%26-Linux-Crash-Course.md) for more details.
 
-#### Week 4-5: Basic Python tutorial (do after git intro?)
+#### Week 4-5: Basic Python tutorial
 * Using Python's [turtle](https://www.geeksforgeeks.org/turtle-programming-python/) library
   * Drake got it to work with just Ubuntu WSL2, [`sudo apt-get install python3-tk`](https://stackoverflow.com/questions/25905540/importerror-no-module-named-tkinter), and an Xserver running
   * Start with this code:
@@ -106,15 +99,18 @@ There are 15 weeks in a semester, so this crash course aims to complete the new 
         scrn.exitonclick()
       </details>
 
-#### Week 6: GitHub (and git?) intro
+#### Week 6: GitHub and `git` intro
 * read [What is Git?](https://dev.to/javascriptcoff1/what-is-git-4pmh)
-* Maybe have a chunk of code they clone (e.g. a python `turtle` function), modify, and then push their changes to a branch?
+* Have each member clone this CrashCourse repo, create a new branch named `<firstname>-hello-word`, commit their Python code from previous weeks, push to their branch, and then make a pull request to merge into `main` (but don't actually merge)
+  * Explain the workflow of git (`git pull` -> make changes -> `git add <files>` -> `git commit -m "what I did"` -> `git push`)
+* Explain useful commands, e.g. `git status`, `git diff`, `git log`
 
 #### Weeks 7-10: [ROS2 Beginner Tutorials: CLI Tools & Client Libraries](https://docs.ros.org/en/foxy/Tutorials.html) (but slightly out of order). Drake tentatively proposes the following tutorials order:
-> Note, to get ROS2 working on your computer, start your X-server, SSH into shatterdome with `ssh -X <username>@<shatterdome_ip>`, and then it should work. If off the campus's WiFi, first SSH into your Turing/Hopper account using `ssh -Y <username>@turing.cs.niu.edu` or `ssh -Y <username>@hopper.cs.niu.edu`, and then `ssh -X` to shatterdome as described above.
-  > * TODO should we use `xrdp` instead? ["Remote Desktop with xrdp" guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Remote-Desktop-with-xrdp.md)
+> Note, connect over `xrdp` for these steps. Shatterdome should have ROS2 installed for all profiles.
+>
+> ~~Note, to get ROS2 working on your computer, start your X-server, SSH into shatterdome with `ssh -X <username>@<shatterdome_ip>`, and then it should work. If off the campus's WiFi, first SSH into your Turing/Hopper account using `ssh -Y <username>@turing.cs.niu.edu` or `ssh -Y <username>@hopper.cs.niu.edu`, and then `ssh -X` to shatterdome as described above.~~
 
-> Note, since we're SSH'ing into shatterdome which is a Linux machine, **always use the Linux instructions, _even if you're a MacOS or Windows user!!!_**
+> Note, since we're working on shatterdome which is a Linux machine, **always use the Linux instructions, _even if you're a MacOS or Windows user!!!_**
 * Some of the "Beginner: CLI Tools" tutorials:
   * [Configuring your ROS 2 environment](https://docs.ros.org/en/foxy/Tutorials/Configuring-ROS2-Environment.html) (*Skip the instructions about installations, ROS2 is already installed on shatterdome!*)
     * (Do we need to set `ROS_DOMAIN_ID`? I guess ignore for now)
@@ -145,7 +141,7 @@ There are 15 weeks in a semester, so this crash course aims to complete the new 
   * challenge: uncomment AddTwoInts code, and make a way for client to request one service or the other (modify the challenge if this is bad use of services)
 
 #### Some weeks: Webots intro (do this before more ROS2 tutorials?)
-* running a demo in Docker container (on shatterdome?) to verify integrity (and cuz it's cool)
+* ~~running a demo in Docker container (on shatterdome?) to verify integrity (and cuz it's cool)~~ _(crossed out since we're no longer using Webots through Docker)_
 * quick intro to scene tree
 * writing code to communicate with robot controller
 * not in crash course, but further reading: https://cyberbotics.com/doc/guide/tutorials?tab-language=python
@@ -161,3 +157,15 @@ This area is for plans we decided to drop, but that we don't want to necessarily
 * Install and test Docker in your terminal by following our [Installing Docker guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-Docker.md)
 * running one of our ROS2 containers: follow the README instructions for running our [`ros2_foxy` Docker container](https://github.com/NIURoverTeam/Dockerfiles/tree/master/ros2_foxy) (you'll need to clone that `NIURoverTeam/Dockerfiles` repo in your WSL)
   * check integrity with `ros2 doctor`
+
+#### Week 2: Getting Started (software installations)
+* _(Banished because we've decided to only use `xrdp` and not bother with WSL2 for speed and consistency reasons.)_
+* TODO should we skip this and use `xrdp` instead? ["Remote Desktop with xrdp" guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Remote-Desktop-with-xrdp.md)
+* If using Windows 10:
+  * Install WSL2 using [this guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps).
+    > If instructed to download your Linux distribution of choice, choose Ubuntu from the Microsoft Store. As of September 2021 however, I don't think this is part of the linked guide.
+  * If you don't see `Ubuntu` when you search for it in your Start Menu, go ahead and install it from the Microsoft Store as well. Choose the one named just `Ubuntu`, without any numbers after.
+* Regardless of your operating system:
+  * To set up an X-server for yourself, follow our [Installing an X-Server guide](https://github.com/NIURoverTeam/Docs/blob/main/Guides/Installing-an-X-Server.md) 
+    * You can test your X-server with `xeyes` (make sure the Xserver is running first) ![image](https://user-images.githubusercontent.com/19244666/118378411-57a53280-b599-11eb-8840-1f77d6dd8646.png)
+    * `xclock` is another good option
